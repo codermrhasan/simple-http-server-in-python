@@ -18,7 +18,8 @@ while True:
     headers = request.split('\n')
     filename = headers[0].split()[1]
 
-    filename == '/index.html' if filename == '/' else filename
+    if filename == '/':
+        filename = '/index.html'
 
     try:
         # file inside public directory. ex. public/index.html
